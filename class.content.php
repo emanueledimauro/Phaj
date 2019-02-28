@@ -59,21 +59,24 @@ function hello(){
 	$OUT["born"] = $year;
 	
 	
-	$datas = array();
-	$datas[0]["nom"] = "Palerme";
-	$datas[0]["cp"] = "90100";
-	$datas[0]["pays"] = "Italie";
-	
-	
-	$datas[1]["nom"] = "Paris";
-	$datas[1]["cp"] = "75000";
-	$datas[1]["pays"] = "France";
+	$cities = array();
+	$cities[0]["city_name"] = "Palerme";
+	$cities[0]["pc"] = "90100";
+	$cities[0]["country"] = "Italie";
+	  
+	$cities[1]["city_name"] = "Paris";
+	$cities[1]["pc"] = "75000";
+	$cities[1]["country"] = "France";
 
+	$OUT["cities"] = $cities;
+	
 
-	$OUT["citta"] = $datas;
-	$OUT["villes"] = $datas;
-	
-	
+	$fruits = array();
+	$fruits[0]["fruit"] = "Apple"; 
+	$fruits[1]["fruit"] = "Orange";
+	$fruits[2]["fruit"] = "cherry";
+
+	$OUT["fruits"] = $fruits;	
 	
 	return $OUT;
 
