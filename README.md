@@ -31,7 +31,7 @@ and execute your function
 $("#myTag").goAjax()
 ```
 <h2>server-side</h2>
-Function "hello" is a method used in getContent class (class.content.php) 
+Function "hello" is a customized method used in getContent class (class.content.php) 
 
 ```php
 function hello(){
@@ -96,7 +96,7 @@ For exemple :
 how <b>are</b> you ?</p>
 I know you were born in the year $born<BR>
 
-you like the following cities
+you like the following cities<BR><BR>
 <!--cities-->
 name : $city_name<BR>
 postal code : $pc<BR>
@@ -141,5 +141,24 @@ function hello(){
 	return $OUT;
 }
 ```
+
+The html charged in #myTag will be : 
+```
+Hi Emanuele Di Mauro,
+how <b>are</b> you ?
+I know you were born in the year 1972
+
+you like the following cities
+
+name : Palermo
+postal code : 90100
+country : Italy 
+
+name : Paris
+postal code : 75000
+country : France 
+
+```
+
 
 
