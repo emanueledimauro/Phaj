@@ -48,8 +48,6 @@ function hello(){
 	
 	/// OUT variables
 	$OUT = array();
-	
-	
 	$OUT["name"] = strtoupper($name);
 	$OUT["born"] = $year;
   
