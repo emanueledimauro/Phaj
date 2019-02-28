@@ -36,16 +36,22 @@ Function "hello" is a mehtod used in getContent class (class.content.php)
 ```php
 function hello(){
   
+	/// IN variables
 	$firstname 	= $this->IN["firstname"];
 	$lastname 	= $this->IN["lastname"];
 	$age 		    = $this->IN["age"]; 
 	
+	
+	// traitements
+	$name = $firstname." ".$lastname;
+	$year = date("Y")-$age;
+	
+	/// OUT variables
 	$OUT = array();
 	
-	**$OUT["name"] = strtoupper($firstname." ".$lastname);**
 	
-	$year = date("Y")-$age;
-	**$OUT["born"] = $year;**
+	$OUT["name"] = strtoupper($name);
+	$OUT["born"] = $year;
   
   return $OUT;
 }
