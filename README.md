@@ -240,7 +240,7 @@ I know you were born in the year 1972
 
 you like the following cities :
 
-name : Palerm
+name : Palerme
 postal code : 90100
 country : Italy 
 
