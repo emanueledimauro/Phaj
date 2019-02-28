@@ -156,7 +156,7 @@ I know you were born in the year 1972
 
 you like the following cities :
 
-name : Palermo
+name : Palerme
 postal code : 90100
 country : Italy 
 
@@ -240,7 +240,7 @@ I know you were born in the year 1972
 
 you like the following cities :
 
-name : Palermo
+name : Palerm
 postal code : 90100
 country : Italy 
 
