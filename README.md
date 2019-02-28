@@ -20,7 +20,8 @@ or
 
 In this case "saluta" is a mehtod used in getContent class (class.content.php) 
 
-<pre>function saluta(){
+```php
+function saluta(){
   
     $nome = $this-> IN["firstname"];
     $cognome = $this->IN["lastname"];
@@ -33,14 +34,16 @@ In this case "saluta" is a mehtod used in getContent class (class.content.php)
 
     return $OUT;
 }
-</pre>
+```
+
 
 
 "saluta" is also the template that is loaded with the same name of the function and that is in <pre>templates/saluta.html</pre>
 
 In the template we have the variables that have been sent to the "saluta" method, in the form <b>$</b>variable :
 
-<html>
+```html
 <p>Hi $firstname $lastname, <BR>
 how <b>are</b> you ?</p>
-</html>
+```
+
