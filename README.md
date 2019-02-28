@@ -137,9 +137,14 @@ function hello(){
 	$datas[1]["country"] = "France";
 
 
-	$OUT["countries"] = $datas;
+	$OUT["cities"] = $datas;
 	return $OUT;
 }
+```
+"cities" of $OUT has the same name as the html comment in the template file :
+
+```html
+<!--cities-->
 ```
 
 The html charged in #myTag will be : 
