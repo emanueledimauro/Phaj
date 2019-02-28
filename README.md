@@ -120,24 +120,25 @@ function hello(){
 	$name = $firstname." ".$lastname;
 	$year = date("Y")-$age;
 	
-	/// OUT variables
+	/// OUT simple variables (not array)
 	$OUT = array();
 	$OUT["name"] = strtoupper($name);
 	$OUT["born"] = $year;
 	
-	
-	$datas = array();
-	$datas[0]["city_name"] = "Palerme";
-	$datas[0]["pc"] = "90100";
-	$datas[0]["country"] = "Italie";
-	
-	
-	$datas[1]["city_name"] = "Paris";
-	$datas[1]["pc"] = "75000";
-	$datas[1]["country"] = "France";
+	// OUT variables array for template loops
+	// cities 
+	$cities = array();
+	$cities[0]["city_name"] = "Palerme";
+	$cities[0]["pc"] = "90100";
+	$cities[0]["country"] = "Italie";
+	  
+	$cities[1]["city_name"] = "Paris";
+	$cities[1]["pc"] = "75000";
+	$cities[1]["country"] = "France";
 
-
-	$OUT["cities"] = $datas;
+	$OUT["cities"] = $cities;
+	
+	
 	return $OUT;
 }
 ```
@@ -165,5 +166,91 @@ country : France
 
 ```
 
+You can also add a lot of loop in the template file : 
+```html
+<p>Hi $name,<BR>
+how <b>are</b> you ?</p>
+I know you were born in the year $born<BR><BR>
 
+You like the following cities :<BR><BR>
+<!--cities-->
+name : $city_name<BR>
+postal code : $pc<BR>
+country : $country<BR><BR>
+<!--cities-->
 
+<BR>You like the following fuits : <BR>
+<ul>
+<!--fruits-->
+<li> $fruit</li>
+<!--fruits-->
+</ul>
+```
+
+In this case, the method hello() must return an other array $fruits like this :
+
+```php
+function hello(){
+
+	/// IN variables
+	$firstname 	= $this->IN["firstname"];
+	$lastname 	= $this->IN["lastname"];
+	$age 		= $this->IN["age"]; 
+	
+	
+	// traitements
+	$name = $firstname." ".$lastname;
+	$year = date("Y")-$age;
+	
+	/// OUT simple variables (not array)
+	$OUT = array();
+	$OUT["name"] = strtoupper($name);
+	$OUT["born"] = $year;
+	
+	// OUT variables array for template loops
+	// cities 
+	$cities = array();
+	$cities[0]["city_name"] = "Palerme";
+	$cities[0]["pc"] = "90100";
+	$cities[0]["country"] = "Italie";
+	  
+	$cities[1]["city_name"] = "Paris";
+	$cities[1]["pc"] = "75000";
+	$cities[1]["country"] = "France";
+
+	$OUT["cities"] = $cities;
+	
+	// fruits
+	$fruits = array();
+	$fruits[0]["fruit"] = "Apple"; 
+	$fruits[1]["fruit"] = "Orange";
+	$fruits[2]["fruit"] = "cherry";
+
+	$OUT["fruits"] = $fruits;	
+	
+	return $OUT;
+}
+```
+
+The html charged in #myTag will be : 
+```
+Hi Emanuele Di Mauro,
+how <b>are</b> you ?
+I know you were born in the year 1972
+
+you like the following cities :
+
+name : Palermo
+postal code : 90100
+country : Italy 
+
+name : Paris
+postal code : 75000
+country : France 
+
+You like the following fuits : 
+- Apple
+- Orange
+- cherry
+
+```
