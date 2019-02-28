@@ -6,24 +6,24 @@ With this framework you can create projects totally based on ajax technology.The
 
 To load a function on the html page we use the addFunct () method as follows :
 ```js
-$("#myTag").addFunct("saluta")
+$("#myTag").addFunct("hello")
 ```
 
 To send a parameter to the function, use the addParam () method as follows
 ```js
-$("#myTag").addParam("name","Emanuele")
+$("#myTag").addParam("firstname","Emanuele")
 ```
 
 You can define everything at the same time :
 
 ```js
-$("#myTag").addFunct("saluta").addParam("name","Emanuele")
+$("#myTag").addFunct("hello").addParam("firstname","Emanuele")
 ```
 
 or 
 
 ```js
-$("#myTag").addFunct("saluta").addParam("firstname","Emanuele").addParam("lastname","Di Mauro")
+$("#myTag").addFunct("hello").addParam("firstname","Emanuele").addParam("lastname","Di Mauro").addParam("age","47")
 ```
 
 and execute your function 
@@ -31,27 +31,29 @@ and execute your function
 $("#myTag").goAjax()
 ```
 
-Function "saluta" is a mehtod used in getContent class (class.content.php) 
+Function "hello" is a mehtod used in getContent class (class.content.php) 
 
 ```php
-function saluta(){
+function hello(){
   
-    $nome = $this-> IN["firstname"];
-    $cognome = $this->IN["lastname"];
-
-    $OUT = array();
-
-    $OUT["firstname"] = strtoupper($nome);
-    $OUT["lastname"] = strtoupper($cognome);
-
-
-    return $OUT;
+	$firstname 	= $this->IN["firstname"];
+	$lastname 	= $this->IN["lastname"];
+	$age 		    = $this->IN["age"]; 
+	
+	$OUT = array();
+	
+	**$OUT["name"] = strtoupper($firstname." ".$lastname);**
+	
+	$year = date("Y")-$age;
+	**$OUT["born"] = $year;**
+  
+  return $OUT;
 }
 ```
 
-"saluta" is also the template that is loaded with the same name of the function and that is in [templates/saluta.html]</pre>
+"hello" is also the template that is loaded with the same name of the function and that is in [templates/hello.html]</pre>
 
-In the template we have the variables that have been sent to the "saluta" method, in the form <b>$</b>variable :
+In the template we have the variables that have been sent to the "hello" method, in the form <b>$</b>variable :
 
 ```html
 <p>Hi $firstname $lastname, <BR>
