@@ -53,7 +53,7 @@ function hello(){
 hello () returns the html text that will be loaded into the tag $("#myTag")
 
 <h2>templates</h2>
-"hello" can be also the template name that is loaded with the same name of the function and that is in [templates/hello.html]
+"hello" can be also the template name that is loaded with the same name of the function, placed in [templates/hello.html]
 
 In this case mehtod hello() must return array of values :
 
