@@ -141,7 +141,7 @@ function hello(){
 	return $OUT;
 }
 ```
-"cities" of $OUT has the same name as the html comment in the template file :
+"cities" in $OUT array returned by hello() has the same name as the html comment in the template file :
 
 ```html
 <!--cities-->
