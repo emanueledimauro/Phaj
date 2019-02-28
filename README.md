@@ -31,7 +31,7 @@ and execute your function
 $("#myTag").goAjax()
 ```
 <h2>server-side</h2>
-Function "hello" is a mehtod used in getContent class (class.content.php) 
+Function "hello" is a method used in getContent class (class.content.php) 
 
 ```php
 function hello(){
@@ -105,7 +105,7 @@ country : $country<BR><BR>
 
 ```
 
-In this case mehtod hello() must return arrays of array values :
+In this case method hello() must return arrays of array values :
 
 ```php
 function hello(){
