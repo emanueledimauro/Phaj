@@ -7,10 +7,6 @@ With this framework you can create projects totally based on ajax technology.The
 To load a function on the html page we use the addFunct () method as follows :
 <code>$("#myTag").addFunct("saluta")</code>
 
-To load a function on the html page we use the addFunct () method as follows :
-<code>$("#myTag").addFunct("saluta")</code>
-
-
 To send a parameter to the function, use the addParam () method as follows
 <code>$("#myTag").addParam("name","Emanuele")</code>
 
