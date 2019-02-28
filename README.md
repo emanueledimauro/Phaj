@@ -60,7 +60,8 @@ function hello(){
 In the template we have the variables that have been sent to the "hello" method, in the form <b>$</b>variable :
 
 ```html
-<p>Hi $firstname $lastname, <BR>
+<p>Hi $name,<BR>
 how <b>are</b> you ?</p>
+I know you were born in the year $born<BR>
 ```
 
