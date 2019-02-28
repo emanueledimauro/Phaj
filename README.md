@@ -11,6 +11,7 @@ To send a parameter to the function, use the addParam () method as follows
 <code>$("#myTag").addParam("name","Emanuele")</code>
 
 You can define everything at the same time :
+
 <code>$("#myTag").addFunct("saluta").addParam("name","Emanuele")</code>
 
 or 
