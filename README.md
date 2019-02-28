@@ -1,6 +1,6 @@
 # Phaj
 Phaj is a word obtained from <b>ph</b>p and <b>aj</b>ax.
-With this framework you can create projects totally based on ajax technology.The framework uses jQuery client-side and server-side php.
+With this framework you can create projects totally based on ajax technology.The framework uses jQuery client-side and php server-side.
 
 <h2>client-side</h2>
 
