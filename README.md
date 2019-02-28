@@ -76,7 +76,6 @@ function hello(){
 }
 ```
 
-To do that, you must return in your mehtod hello() arrays of arrays values
 In the template we have the OUT variables returned from hello() method, in the form <b>$</b>{variable} :
 
 ```html
