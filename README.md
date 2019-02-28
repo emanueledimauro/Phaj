@@ -57,7 +57,7 @@ function hello(){
 
 "hello" is also the template that is loaded with the same name of the function and that is in [templates/hello.html]</pre>
 
-In the template we have the variables that have been sent to the "hello" method, in the form <b>$</b>variable :
+In the template we have the OUT variables returned from "hello" method, in the form <b>$</b>variable :
 
 ```html
 <p>Hi $name,<BR>
