@@ -39,7 +39,7 @@ function hello(){
 	/// IN variables
 	$firstname 	= $this->IN["firstname"];
 	$lastname 	= $this->IN["lastname"];
-	$age 		    = $this->IN["age"]; 
+	$age 		= $this->IN["age"]; 
 	
 	
 	// traitements
