@@ -45,15 +45,18 @@ function go(){
 
 }
 
-function saluta(){
+function hello(){
 
-	$nome = $this->IN["nome"];
-	$cognome = $this->IN["cognome"];
+	$firstname 	= $this->IN["firstname"];
+	$lastname 	= $this->IN["lastname"];
+	$age 		= $this->IN["age"]; 
 	
 	$OUT = array();
 	
-	$OUT["nome"] = strtoupper($nome);
-	$OUT["cognome"] = strtoupper($cognome);
+	$OUT["name"] = strtoupper($firstname." ".$lastname);
+	
+	$year = date("Y")-$age;
+	$OUT["born"] = $year;
 	
 	
 	$datas = array();
