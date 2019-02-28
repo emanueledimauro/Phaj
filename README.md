@@ -16,7 +16,7 @@ You can define everything at the same time :
 
 or 
 
-<code>$("#myTag").addFunct("saluta").addParam("firstname","Emanuele").addParam("lastname","Emanuele")</code>
+<code>$("#myTag").addFunct("saluta").addParam("firstname","Emanuele").addParam("lastname","Di Mauro")</code>
 
 In this case "saluta" is a mehtod used in getContent class (class.content.php) 
 
