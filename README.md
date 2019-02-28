@@ -96,7 +96,7 @@ For exemple :
 how <b>are</b> you ?</p>
 I know you were born in the year $born<BR>
 
-you like the following cities<BR><BR>
+you like the following cities :<BR><BR>
 <!--cities-->
 name : $city_name<BR>
 postal code : $pc<BR>
@@ -153,7 +153,7 @@ Hi Emanuele Di Mauro,
 how <b>are</b> you ?
 I know you were born in the year 1972
 
-you like the following cities
+you like the following cities :
 
 name : Palermo
 postal code : 90100
